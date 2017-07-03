@@ -366,14 +366,17 @@ iframe {
   right: 0;
   top: 0;
 }
-.skills .skillset .level-bar {
+.level-bar {
   height: 15px;
   background: #e8e8e8;
 }
-.skills .skillset .level-bar-inner {
+
+
+.level-bar-inner {
   height: 15px;
   background: #66cb8c;
 }
+
 /* Testimonials section */
 .testimonials .item {
   margin-bottom: 30px;
