@@ -7,7 +7,7 @@ search: exclude
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     {% for page in site.pages %}{% unless page.sitemap %} {% continue %} {% endunless %}
     <url> 
-        <loc>{{site.github.url  | replace: 'http://', 'https://'}}{{page.url}}</loc>
+        <loc>{{site.url  | replace: 'http://', 'https://'}}{{page.url}}</loc>
         <changefreq>{{ page.changefreq | default: "monthly"}}</changefreq>
         <lastmod>{{page.updated_at | default: site.time | date: '%Y-%m-%d' }}</lastmod>
         <priority>{{ page.priority | default: 1 }}</priority>
