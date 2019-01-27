@@ -145,56 +145,11 @@
                 }
             }, 
             false               
-        );
-
-        var isOverlapping = function(rightElement, leftElement){
-            return rightElement.getBoundingClientRect().right > leftElement.getBoundingClientRect().left;
-        };
-
-        var swapWithSmaller = function(element){
-            if(element.dataset && element.dataset["smaller"]){
-                var inner = element.textContent;
-                element.textContent = element.dataset["smaller"];
-                element.dataset["bigger"] = inner;
-                delete element.dataset["smaller"];
-            }
-        }
-
-        var swapWithBigger = function(element, leftElement){
-            if(element.dataset && element.dataset["bigger"]){
-                var inner = element.textContent;
-                element.textContent = element.dataset["bigger"];
-
-                if(isOverlapping(element, leftElement)){
-                    element.textContent = inner;
-                }else{
-                    element.dataset["smaller"] = inner;
-                    delete element.dataset["bigger"];
-                }
-            }
-        }
-
-        window.onresize = function(){
-            var skillset = document.querySelectorAll(".overlap");
-            for (var i = 0; i < skillset.length; i ++){
-                var header = skillset[i].querySelector("h3");
-                var language = header.querySelector(".level-language");
-                var label = header.querySelector(".level-label");
-                if(language.dataset && (language.dataset["smaller"] || language.dataset["bigger"])){
-                    if(isOverlapping(language, label)){
-                        swapWithSmaller(language);
-                    }else{
-                        swapWithBigger(language, label);
-                    }
-                }
-            }
-        };
-        window.onresize();
+        );  
     });
 </script>
 
 <!-- Javascript -->          
- <script type="text/javascript" src="assets/plugins/tooltip.min.js"></script>
  <!--<script type="text/javascript" src="assets/plugins/jquery-1.11.1.min.js"></script>-->
 <!--<script type="text/javascript" src="assets/plugins/jquery-migrate-1.2.1.min.js"></script>-->
 <!--<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>    -->
