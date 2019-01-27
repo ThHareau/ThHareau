@@ -9,8 +9,8 @@ sitemap: true
         <div class="row">
             <div class="primary col-md-8 col-sm-12 col-xs-12">
                 {% include about-section.html %} 
-                {% include project-section.html %} 
                 {% include experience-section.html %}
+                {% include project-section.html %} 
             </div><!--//primary-->
             <div class="secondary col-md-4 col-sm-12 col-xs-12">
                 <!-- 

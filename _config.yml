@@ -19,4 +19,5 @@ kramdown:
   syntax_highlighter: rouge
 title: Thomas Hareau
 author: Thomas Hareau
-description: "Thomas Hareau: Computer Science Student at the INSA Rennes and the TU Dresden"
+subtitle: Software Development Engineer at ProtonMail
+description: "Thomas Hareau: Software Development Engineer at ProtonMail"
