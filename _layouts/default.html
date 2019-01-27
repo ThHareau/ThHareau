@@ -14,7 +14,7 @@
     <meta property="og:title" content="{{site.title}}" />
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="{{site.url  | replace: 'http://', 'https://'}}" />
-    <meta property="og:image" content="{{site.url  | replace: 'http://', 'https://'}}/assets/images/profile.png" />
+    <meta property="og:image" content="{{site.url  | replace: 'http://', 'https://'}}/assets/images/profile.jpg" />
     <meta property="og:description" content="{{site.description}}" />
     <link rel="shortcut icon" href="favicon.ico">  
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
@@ -70,20 +70,29 @@
     <!-- ******HEADER****** --> 
     <header class="header">
         <div class="container">                       
-            <img class="profile-image img-responsive pull-left" src="assets/images/profile.png" alt="{{ site.title }}" width="180"/>
+            <div class="image-shadow"></div>
+            <img class="profile-image img-responsive pull-left" src="assets/images/profile.jpg" alt="{{ site.title }}" width="180"/>
             <div class="profile-content pull-left">
                 <h1 class="name">{{ site.title }}</h1>
                 <h2 class="desc">{{ site.subtitle }}</h2>   
-                <ul class="social list-inline">                 
-                    <li><a href="https://www.linkedin.com/in/thomas-hareau-742b8085/#"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="https://gitlab.com/entilore"><i class="fa fa-gitlab"></i></a></li>   
-                    <li><a href="/assets/files/CV%20Thomas%20HAREAU.pdf"><i class="fa fa-file-pdf-o"></i></a></li>
-                    <li class="last-item"><a href="https://github.com/thhareau"><i class="fa fa-github-alt"></i></a></li>
-                </ul> 
-            </div><!--//profile-->
-            <a class="btn btn-cta-primary pull-right" href="mailto:thomas@hareau.eu" target="_blank"><i class="fa fa-paper-plane"></i> Contact Me</a>              
+                <div class="row">
+                    <ul class="social list-inline col-sm-7">                 
+                        <li><a href="https://www.linkedin.com/in/thomas-hareau-742b8085/#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://gitlab.com/entilore"><i class="fa fa-gitlab"></i></a></li>   
+                        <li><a href="/assets/files/CV%20Thomas%20HAREAU.pdf"><i class="fa fa-file-pdf-o"></i></a></li>
+                        <li class="last-item"><a href="https://github.com/thhareau"><i class="fa fa-github-alt"></i></a></li>
+                    </ul>
+                    <div class="col-sm-5 hidden-lg hidden-md small-screen-btn">
+                        <a target="_blank" href="/assets/files/publickey.thomas@hareau.eu.asc" class="publickey"><i class="fa fa-key"></i></a>
+                        <a class="btn btn-cta-primary" href="mailto:thomas@hareau.eu" target="_blank"><i class="fa fa-paper-plane"></i> Contact Me</a>
+                    </div>
+                </div>
+            </div><!--//profile-->              
+            <div class="hidden-xs hidden-sm big-screen-btn pull-right">
+                <a target="_blank" href="/assets/files/publickey.thomas@hareau.eu.asc" class="publickey"><i class="fa fa-key"></i></a>
+                <a class="btn btn-cta-primary" href="mailto:thomas@hareau.eu" target="_blank"><i class="fa fa-paper-plane"></i> Contact Me</a>
+            </div>
         </div><!--//container-->
-
 
 <!--        <nav class="navbar navbar-default">-->
 <!--          <div class="container">-->
@@ -111,7 +120,33 @@
 
 
 <script>
-    (function() {
+    function ready(callback){
+        // in case the document is already rendered
+        if (document.readyState!='loading') callback();
+        // modern browsers
+        else if (document.addEventListener) document.addEventListener('DOMContentLoaded', callback);
+        // IE <= 8
+        else document.attachEvent('onreadystatechange', function(){
+            if (document.readyState=='complete') callback();
+        });
+    }
+
+
+    ready(function(){
+        var attempts = 0;
+
+        var image = document.getElementsByClassName('profile-image')[0];
+        image.addEventListener(
+            'click', 
+            function (event) {
+                attempts += 1;
+                if(attempts === 5) {
+                    event.target.style = "animation: 2000ms 1 cubic-bezier(.18,.89,.6,1.09) spin";    
+                }
+            }, 
+            false               
+        );
+
         var isOverlapping = function(rightElement, leftElement){
             return rightElement.getBoundingClientRect().right > leftElement.getBoundingClientRect().left;
         };
@@ -140,7 +175,7 @@
         }
 
         window.onresize = function(){
-            var skillset = document.querySelectorAll(".skillset .item");
+            var skillset = document.querySelectorAll(".overlap");
             for (var i = 0; i < skillset.length; i ++){
                 var header = skillset[i].querySelector("h3");
                 var language = header.querySelector(".level-language");
@@ -155,8 +190,7 @@
             }
         };
         window.onresize();
-
-    })();
+    });
 </script>
 
 <!-- Javascript -->          

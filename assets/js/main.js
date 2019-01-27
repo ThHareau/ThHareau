@@ -17,6 +17,7 @@ jQuery(document).ready(function($) {
             
         });
 
+         var attempts = 0;
     });
     
     /* Bootstrap Tooltip for Skillset */
