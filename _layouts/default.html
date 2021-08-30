@@ -31,37 +31,6 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
       <![endif]-->
-
-<!-- Matomo -->
-<script type="text/javascript">
-  var _paq = _paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-  _paq.push([function() {
-  var self = this;
-  function getOriginalVisitorCookieTimeout() {
-    var now = new Date(),
-    nowTs = Math.round(now.getTime() / 1000),
-    visitorInfo = self.getVisitorInfo();
-    var createTs = parseInt(visitorInfo[2]);
-    var cookieTimeout = 33696000; // 13 mois en secondes
-    var originalTimeout = createTs + cookieTimeout - nowTs;
-    return originalTimeout;
-  }
-  this.setVisitorCookieTimeout( getOriginalVisitorCookieTimeout() );
-  }]);
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="//stats.hareau.eu/";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', '1']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-
-<!-- End Matomo Code -->
-
   </head> 
 
   <body>
@@ -92,17 +61,6 @@
             </div>
         </div><!--//container-->
 
-<!--        <nav class="navbar navbar-default">-->
-<!--          <div class="container">-->
-<!--            <div class="navbar-header hidden-xs">-->
-<!--              <a class="navbar-brand" href="index.html"> <img alt="Brand" src="favicon.ico"></a>-->
-<!--            </div>-->
-<!--              <ul class="nav navbar-nav">-->
-<!--                <li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>-->
-<!--                <li><a href="/">Contact</a></li>-->
-<!--              </ul>-->
-<!--          </div> -->
-<!--        </nav>-->
     </header><!--//header-->
     {{ content }}
 
@@ -147,14 +105,6 @@
     });
 </script>
 
-<!-- Javascript -->          
- <!--<script type="text/javascript" src="assets/plugins/jquery-1.11.1.min.js"></script>-->
-<!--<script type="text/javascript" src="assets/plugins/jquery-migrate-1.2.1.min.js"></script>-->
-<!--<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>    -->
-<!--<script type="text/javascript" src="assets/plugins/jquery-rss/dist/jquery.rss.min.js"></script>-->
-<!-- github activity plugin -->
-<!-- custom js -->
-<!--<script type="text/javascript" src="assets/js/main.js"></script>-->
 </body>
 </html> 
 
