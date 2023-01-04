@@ -21,3 +21,9 @@ title: Thomas Hareau
 author: Thomas Hareau
 subtitle: Senior Software Engineer @ Doctolib
 description: "Thomas Hareau: Software Development Engineer at ProtonMail"
+collections:
+  - experiences
+  - achievements
+  - sections
+exclude:
+  - .idea
