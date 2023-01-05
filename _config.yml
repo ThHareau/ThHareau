@@ -20,10 +20,19 @@ kramdown:
 title: Thomas Hareau
 author: Thomas Hareau
 subtitle: Senior Software Engineer @ Doctolib
-description: "Thomas Hareau: Software Development Engineer at ProtonMail"
+description: "Thomas Hareau: Senior Software Engineer @ Doctolib"
 collections:
   - experiences
   - achievements
   - sections
-exclude:
-  - .idea
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      content_version: "long"
+  -
+    scope:
+      path: "/resume*"
+    values:
+      content_version: "short"

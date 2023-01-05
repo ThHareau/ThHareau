@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html lang="en" class="ie8" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" prefix="og: http://ogp.me/ns#"> <!--<![endif]-->
+<head>
+    <title>{{site.title}}</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{site.description}}">
+    <meta name="author" content="{{site.author}}">
+
+    <meta property="og:title" content="{{site.title}}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="{{site.url  | replace: 'http://', 'https://'}}"/>
+    <meta property="og:image" content="{{site.url  | replace: 'http://', 'https://'}}/assets/images/profile.jpg"/>
+    <meta property="og:description" content="{{site.description}}"/>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/a4page.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body id="top">
+{{ content }}
+</body>
+</html> 
+

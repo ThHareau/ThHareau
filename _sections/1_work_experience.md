@@ -2,6 +2,7 @@
 title: Work Experience
 section: experience
 rank: 2
+version: long
 ---
 
 

@@ -2,6 +2,7 @@
 title: Achievements
 section: projects
 rank: 3
+version: long
 ---
 
 {% for achievement in site.achievements %}
