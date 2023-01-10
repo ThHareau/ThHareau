@@ -152,6 +152,12 @@ iframe {
   margin-top: 0;
   margin-bottom: 15px;
 }
+.header .profile-content .social  {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style-type: none;
+}
 .header .profile-content .social a {
   background: #b0b7bf;
   width: 36px;
@@ -598,7 +604,9 @@ iframe {
   background: #778492;
 }
 
-
+img.mastodon {
+  margin: 8px;
+}
 
 /* Small devices (tablets, 768px and up) */
 /* Medium devices (desktops, 992px and up) */

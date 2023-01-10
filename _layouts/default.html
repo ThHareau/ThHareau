@@ -16,44 +16,45 @@
     <meta property="og:url" content="{{site.url  | replace: 'http://', 'https://'}}" />
     <meta property="og:image" content="{{site.url  | replace: 'http://', 'https://'}}/assets/images/profile.jpg" />
     <meta property="og:description" content="{{site.description}}" />
-    <link rel="shortcut icon" href="favicon.ico">  
-    <link href='assets/fonts/montserrat/montserrat.css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href='assets/fonts/montserrat/montserrat.css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <!-- Global CSS -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
     <!-- Plugins CSS -->
     <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
-    
-    <!-- Theme CSS -->  
+
+    <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
       <![endif]-->
-  </head> 
+  </head>
 
   <body>
-    <!-- ******HEADER****** --> 
+    <!-- ******HEADER****** -->
     <header class="header">
-        <div class="container">                       
+        <div class="container">
             <div class="image-shadow"></div>
-            <img class="profile-image img-responsive pull-left" src="assets/images/profile.jpg" alt="{{ site.title }}" width="180"/>
+            <img class="profile-image img-responsive pull-left" src="assets/images/profile.jpg" alt="{{ site.title }}" width="180" role="none" />
             <div class="profile-content pull-left">
                 <h1 class="name">{{ site.title }}</h1>
-                <h2 class="desc">{{ site.subtitle }}</h2>   
+                <h2 class="desc">{{ site.subtitle }}</h2>
                 <div class="row">
-                    <ul class="social list-inline col-sm-7">                 
+                    <ul class="social col-sm-8">
                         <li><a href="https://www.linkedin.com/in/thomas-hareau"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="https://gitlab.com/entilore"><i class="fa fa-gitlab"></i></a></li>   
+                        <li><a rel="me" href="https://piaille.fr/@thhareau"><img class="mastodon" src="assets/images/mastodon.svg" alt="mastodon" /></a></li>
+                        <li><a href="https://gitlab.com/entilore"><i class="fa fa-gitlab"></i></a></li>
                         <li><a href="/assets/files/CV%20Thomas%20HAREAU.pdf"><i class="fa fa-file-pdf-o"></i></a></li>
                         <li class="last-item"><a href="https://github.com/thhareau"><i class="fa fa-github-alt"></i></a></li>
                     </ul>
-                    <div class="col-sm-5 hidden-lg hidden-md small-screen-btn">
+                    <div class="col-sm-4 hidden-lg hidden-md small-screen-btn">
                         <a target="_blank" href="/assets/files/publickey.thomas@hareau.eu.asc" class="publickey"  data-toggle="tooltip" title="Download my public key"><i class="fa fa-key"></i></a>
                         <a class="btn btn-cta-primary" href="mailto:thomas@hareau.eu" target="_blank"><i class="fa fa-paper-plane"></i> Contact Me</a>
                     </div>
                 </div>
-            </div><!--//profile-->              
+            </div><!--//profile-->
             <div class="hidden-xs hidden-sm big-screen-btn pull-right">
                 <a target="_blank" href="/assets/files/publickey.thomas@hareau.eu.asc" class="publickey" data-toggle="tooltip" title="Download my public key"><i class="fa fa-key"></i></a>
                 <a class="btn btn-cta-primary" href="mailto:thomas@hareau.eu" target="_blank"><i class="fa fa-paper-plane"></i> Contact Me</a>
@@ -63,12 +64,12 @@
     </header><!--//header-->
     {{ content }}
 
-<!-- ******FOOTER****** --> 
+<!-- ******FOOTER****** -->
 <footer class="footer">
     <div class="container text-center">
         <small class="copyright"> {{ site.title }} </small> -
         <small class="copyright"> contact: thomas@hareau.eu </small> -
-        <small class="copyright">Designed by <a class="copyright no-decoration" href="http://themes.3rdwavemedia.com" target="_blank">3rd Wave Media</a></small> - 
+        <small class="copyright">Designed by <a class="copyright no-decoration" href="http://themes.3rdwavemedia.com" target="_blank">3rd Wave Media</a></small> -
         <small class="copyright"><a class="copyright no-decoration" href="privacy.html">Privacy</a></small>
     </div><!--//container-->
 </footer><!--//footer-->
@@ -92,15 +93,15 @@
 
         var image = document.getElementsByClassName('profile-image')[0];
         image.addEventListener(
-            'click', 
+            'click',
             function (event) {
                 attempts += 1;
                 if(attempts === 5) {
-                    event.target.style = "animation: 2000ms 1 cubic-bezier(.18,.89,.6,1.09) spin";    
+                    event.target.style = "animation: 2000ms 1 cubic-bezier(.18,.89,.6,1.09) spin";
                 }
-            }, 
-            false               
-        );  
+            },
+            false
+        );
     });
 </script>
 
