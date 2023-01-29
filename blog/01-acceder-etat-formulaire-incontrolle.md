@@ -1,5 +1,5 @@
 ---
-title: Accéder à l'état formulaire incontrôlé
+title: Accéder à l'état d'un formulaire incontrôlé
 layout: post
 sitemap: true
 type: article
