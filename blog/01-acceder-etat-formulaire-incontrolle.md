@@ -11,7 +11,7 @@ Les formulaires contrôlés sont pratiques car ils offrent un contrôle fin sur 
 D'un autre côté, les formulaires incontrôlés sont souvent plus courts et plus lisibles. Ils se basent sur le comportement natif des éléments HTML, réduisant ainsi les tâches répétitives pour la gestion des composants contrôlés.
 
 <div class="alert alert-block alert-info">
-  An english version of this article exists on [dev.to](https://dev.to/thhareau/accessing-current-form-state-using-uncontrolled-components-51lj) 
+  An english version of this article exists on <a href="https://dev.to/thhareau/accessing-current-form-state-using-uncontrolled-components-51lj">dev.to</a> 
 </div>
 
 ### Formulaire contrôlé
