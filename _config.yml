@@ -1,8 +1,12 @@
 github: [metadata]
 encoding: UTF-8
+markdown: kramdown
+highlighter: rouge
 kramdown:
   input: GFM
   hard_wrap: false
+  math_engine: mathjax
+  syntax_highlighter: rouge
 future: true
 jailed: false
 theme: jekyll-theme-primer
@@ -11,12 +15,8 @@ gfm_quirks: paragraph_end
 lsi: false
 safe: true
 incremental: false
-highlighter: rouge
 gist:
   noscript: false
-kramdown:
-  math_engine: mathjax
-  syntax_highlighter: rouge
 title: Thomas Hareau
 author: Thomas Hareau
 subtitle: Senior Software Engineer @ Doctolib

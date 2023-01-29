@@ -11,20 +11,21 @@
     <meta name="description" content="{{site.description}}">
     <meta name="author" content="{{site.author}}">
 
-    <meta property="og:title" content="{{site.title}}" />
-    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="{{page.title | default: site.title}}" />
+    <meta property="og:type" content="{{ page.type | default: 'website' }}"/>
     <meta property="og:url" content="{{site.url  | replace: 'http://', 'https://'}}" />
     <meta property="og:image" content="{{site.url  | replace: 'http://', 'https://'}}/assets/images/profile.jpg" />
-    <meta property="og:description" content="{{site.description}}" />
-    <link rel="shortcut icon" href="favicon.ico">
-    <link href='assets/fonts/montserrat/montserrat.css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <meta property="og:description" content="{{ page.description | default: site.description}}" />
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="/assets/fonts/montserrat/montserrat.css?family=Montserrat:400,700" rel='stylesheet' type='text/css'>
     <!-- Global CSS -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.min.css">
     <!-- Plugins CSS -->
-    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/plugins/font-awesome/css/font-awesome.css">
+    <link href="/assets/css/rouge.css" rel="stylesheet" >
 
     <!-- Theme CSS -->
-    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <link id="theme-style" rel="stylesheet" href="/assets/css/styles.css">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -37,14 +38,14 @@
     <header class="header">
         <div class="container">
             <div class="image-shadow"></div>
-            <img class="profile-image img-responsive pull-left" src="assets/images/profile.jpg" alt="{{ site.title }}" width="180" role="none" />
+            <img class="profile-image img-responsive pull-left" src="/assets/images/profile.jpg" alt="{{ site.title }}" width="180" role="none" />
             <div class="profile-content pull-left">
                 <h1 class="name">{{ site.title }}</h1>
                 <h2 class="desc">{{ site.subtitle }}</h2>
                 <div class="row">
                     <ul class="social col-sm-8">
                         <li><a href="https://www.linkedin.com/in/thomas-hareau"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a rel="me" href="https://piaille.fr/@thhareau"><img class="mastodon" src="assets/images/mastodon.svg" alt="mastodon" /></a></li>
+                        <li><a rel="me" href="https://piaille.fr/@thhareau"><img class="mastodon" src="/assets/images/mastodon.svg" alt="mastodon" /></a></li>
                         <li><a href="https://gitlab.com/entilore"><i class="fa fa-gitlab"></i></a></li>
                         <li><a href="/assets/files/CV%20Thomas%20HAREAU.pdf"><i class="fa fa-file-pdf-o"></i></a></li>
                         <li class="last-item"><a href="https://github.com/thhareau"><i class="fa fa-github-alt"></i></a></li>
@@ -69,8 +70,8 @@
     <div class="container text-center">
         <small class="copyright"> {{ site.title }} </small> -
         <small class="copyright"> contact: thomas@hareau.eu </small> -
-        <small class="copyright">Designed by <a class="copyright no-decoration" href="http://themes.3rdwavemedia.com" target="_blank">3rd Wave Media</a></small> -
-        <small class="copyright"><a class="copyright no-decoration" href="privacy.html">Privacy</a></small>
+        <small class="copyright">Designed by <a class="copyright no-decoration" href="https://themes.3rdwavemedia.com" target="_blank">3rd Wave Media</a></small> -
+        <small class="copyright"><a class="copyright no-decoration" href="/privacy.html">Privacy</a></small>
     </div><!--//container-->
 </footer><!--//footer-->
 
@@ -78,12 +79,12 @@
 <script>
     function ready(callback){
         // in case the document is already rendered
-        if (document.readyState!='loading') callback();
+        if (document.readyState!=='loading') callback();
         // modern browsers
         else if (document.addEventListener) document.addEventListener('DOMContentLoaded', callback);
         // IE <= 8
         else document.attachEvent('onreadystatechange', function(){
-            if (document.readyState=='complete') callback();
+            if (document.readyState==='complete') callback();
         });
     }
 
