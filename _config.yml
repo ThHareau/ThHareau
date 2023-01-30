@@ -22,9 +22,15 @@ author: Thomas Hareau
 subtitle: Senior Software Engineer @ Doctolib
 description: "Thomas Hareau: Senior Software Engineer @ Doctolib"
 collections:
-  - experiences
-  - achievements
-  - sections
+  experiences:
+    output: false
+  achievements:
+    output: false
+  sections:
+    output: false
+  blog_posts:
+    output: true
+    permalink: /blog/:title:output_ext
 defaults:
   -
     scope:
