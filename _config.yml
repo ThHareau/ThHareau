@@ -9,9 +9,9 @@ kramdown:
   syntax_highlighter: rouge
 future: true
 jailed: false
-theme: jekyll-theme-primer
 gfm_quirks: paragraph_end
-
+plugins:
+  - jekyll-postcss
 lsi: false
 safe: true
 incremental: false
@@ -43,3 +43,6 @@ defaults:
       path: "/resume*"
     values:
       content_version: "short"
+
+postcss:
+  cache: false
